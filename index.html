@@ -1,42 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Lua Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lean Menu</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: #121212;
-      color: #fff;
+      padding: 0;
       font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
+
     .menu {
-      padding: 20px 40px;
-      background: #1e1e1e;
+      width: 350px;
+      background: #111;
       border-radius: 12px;
-      box-shadow: 0 0 15px #00aaff;
-      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
     }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #00aaff;
-      border: none;
-      color: white;
-      border-radius: 6px;
+
+    .menu-header {
+      background: url('/mnt/data/e0779309-ce7d-4fe0-9c0e-a1051e63e29f.png') no-repeat center/cover;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .menu-header::after {
+      content: "HOME";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 8px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .menu-list {
+      list-style: none;
+    }
+
+    .menu-item {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #333;
       cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .menu-item:hover {
+      background-color: #0f0;
+      color: #000;
+    }
+
+    .menu-item span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-footer {
+      padding: 10px;
+      font-size: 12px;
+      background: #0c0c0c;
+      text-align: center;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
   <div class="menu">
-    <h1>Hello from HTML!</h1>
-    <p>This is working inside DUI.</p>
-    <button onclick="alert('Clicked!')">Click Me</button>
+    <div class="menu-header"></div>
+    <ul class="menu-list">
+      <li class="menu-item"><span>👤 Self</span> &gt;</li>
+      <li class="menu-item"><span>🌐 Online</span> &gt;</li>
+      <li class="menu-item"><span>🔫 Combat/Weapons</span> &gt;</li>
+      <li class="menu-item"><span>👁 Visual</span> &gt;</li>
+      <li class="menu-item"><span>🚘 Vehicle</span> &gt;</li>
+      <li class="menu-item"><span>🔮 Miscellaneous</span> &gt;</li>
+      <li class="menu-item"><span>💥 Destructive</span> &gt;</li>
+      <li class="menu-item"><span>📢 Triggers</span> &gt;</li>
+      <li class="menu-item"><span>⚙ Settings</span> &gt;</li>
+      <li class="menu-item"><span>💾 Resource Manager</span> &gt;</li>
+    </ul>
+    <div class="menu-footer">
+      Version: Beta | 24hrs ago<br>1/10
+    </div>
   </div>
 </body>
 </html>
